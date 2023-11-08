@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal Nomor 10 B</title>
+</head>
+<body>
+
+<h1>Mengecek Tahun Kabisat</h1>
+
+<label for="tahun">Masukkan Tahun:</label>
+<input type="number" id="tahun" placeholder="Tahun">
+<br>
+
+<br><button onclick="cekTahunKabisat()">Cek Tahun</button>
+
+<p id="hasil"></p>
+
+<script>
+function cekTahunKabisat() {
+  const tahun = document.getElementById("tahun").value;
+
+  if (tahun % 4 !== 0) {
+    document.getElementById("hasil").textContent = "Bukan Tahun Kabisat";
+  } else {
+    document.getElementById("hasil").textContent = "Tahun Kabisat";
+  }
+}
+</script>
+
+</body>
+</html>

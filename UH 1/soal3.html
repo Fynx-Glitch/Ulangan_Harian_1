@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal Nomor 3 B</title>
+</head>
+<body>
+
+<h1>Luas Segitiga</h1>
+
+<label for="alas">Nilai Alas:</label>
+<input type="number" id="alas" placeholder="Masukkan Niali Alas">
+<br>
+<br><label for="tinggi">Nilai Tinggi:</label>
+<input type="number" id="tinggi" placeholder="Masukkan Nilai Tinggi">
+<br>
+
+<br><button onclick="hitungLuasSegitiga()">Hitung Luas</button>
+
+<p id="hasil"></p>
+
+<script>
+function hitungLuasSegitiga() {
+  const alas = parseFloat(document.getElementById("alas").value);
+  const tinggi = parseFloat(document.getElementById("tinggi").value);
+
+  if (!isNaN(alas) && !isNaN(tinggi)) {
+    const luas = 0.5 * alas * tinggi;
+    document.getElementById("hasil").textContent = "Luas Segitiga: " + luas;
+  } else {
+    document.getElementById("hasil").textContent = "Masukkan panjang alas dan tinggi yang valid.";
+  }
+}
+</script>
+
+</body>
+</html>

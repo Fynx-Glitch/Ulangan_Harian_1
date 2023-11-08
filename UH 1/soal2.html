@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal Nomor 4 B</title>
+</head>
+<body>
+
+<h1>Keliling Jajar Genjang</h1>
+
+<label for="sisiA">Panjang Sisi A:</label>
+<input type="number" id="sisiA" placeholder="Masukkan Sisi A">
+<br>
+<br><label for="sisiB">Panjang Sisi B:</label>
+<input type="number" id="sisiB" placeholder="Masukkan Sisi B">
+<br>
+
+
+<br><button onclick="hitungKeliling()">Hitung Keliling</button>
+
+
+<p id="hasil"></p>
+
+<script>
+function hitungKeliling() {
+  const sisiA = parseFloat(document.getElementById("sisiA").value);
+  const sisiB = parseFloat(document.getElementById("sisiB").value);
+
+  if (!isNaN(sisiA) && !isNaN(sisiB)) {
+    const keliling = 2 * (sisiA + sisiB);
+    document.getElementById("hasil").textContent = "Keliling Jajar Genjang: " + keliling;
+  } else {
+    document.getElementById("hasil").textContent = "Masukkan panjang sisi A dan sisi B yang valid.";
+  }
+}
+</script>
+
+</body>
+</html>

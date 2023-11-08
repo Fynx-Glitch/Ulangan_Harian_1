@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soal 6 B</title>
+</head>
+<body>
+
+<h1>Menampilkan Jenis Smartphone</h1>
+
+<label for="info">Masukkan Informasi Smartphone:</label>
+<input type="text" id="info" placeholder="10MP atau 128GB">
+<br>
+
+<br><button onclick="tampilkanJenisSmartphone()">Tampilkan Jenis Smartphone</button>
+
+<p id="hasil"></p>
+
+<script>
+function tampilkanJenisSmartphone() {
+  const info = document.getElementById("info").value.toLowerCase();
+
+  if (info === "10mp") {
+    document.getElementById("hasil").textContent = "Kamera";
+  } else if (info === "128gb") {
+    document.getElementById("hasil").textContent = "Memori";
+  } else {
+    document.getElementById("hasil").textContent = "Tidak ada informasi jenis smartphone yang sesuai.";
+  }
+}
+</script>
+
+</body>
+</html>

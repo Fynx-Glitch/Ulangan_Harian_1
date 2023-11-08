@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Soal Nomor 2 B</title>
+</head>
+<body>
+
+<h1>Pengecekan Nilai</h1>
+
+<input type="number" id="nilai" placeholder="Masukkan nilai">
+
+<button onclick="cekNilai()">Cek Nilai</button>
+
+<p id="hasil"></p>
+
+<script>
+function cekNilai() {
+  const nilai = parseFloat(document.getElementById("nilai").value);
+
+  if (nilai > 80) {
+    document.getElementById("hasil").textContent = "SANGAT MEMUASKAN";
+  } else if (nilai >= 60 && nilai <= 80) {
+    document.getElementById("hasil").textContent = "MEMUASKAN";
+  } else {
+    document.getElementById("hasil").textContent = "JANGAN MENYERAH, COBA LAGI!";
+  }
+}
+</script>
+
+</body>
+</html>
